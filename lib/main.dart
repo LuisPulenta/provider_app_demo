@@ -4,9 +4,11 @@ import 'package:provider/provider.dart';
 import 'package:provider_app_demo/src/providers/heroesinfo.dart';
 import 'package:provider_app_demo/src/providers/villanosinfo.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // @override
   // Widget build(BuildContext context) {
   //   return ChangeNotifierProvider(
@@ -26,15 +28,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => new HeroesInfo()),
-        ChangeNotifierProvider(create: (_) => new VillanosInfo()),
+        ChangeNotifierProvider(create: (_) => HeroesInfo()),
+        ChangeNotifierProvider(create: (_) => VillanosInfo()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
         initialRoute: 'home',
         routes: {
-          'home': (context) => HomeScreen(),
+          'home': (context) => const HomeScreen(),
         },
       ),
     );

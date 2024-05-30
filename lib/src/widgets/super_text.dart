@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_app_demo/src/providers/heroesinfo.dart';
-import 'package:provider_app_demo/src/providers/villanosinfo.dart';
+import 'package:provider_app_demo/src/providers/providers.dart';
 
 class SuperText extends StatelessWidget {
   const SuperText({Key? key}) : super(key: key);
@@ -24,7 +23,7 @@ class SuperText extends StatelessWidget {
       ),
       Text(
         villanosInfo.villano,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 25,
         ),
       ),

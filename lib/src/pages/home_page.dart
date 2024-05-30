@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_app_demo/src/providers/heroesinfo.dart';
+import 'package:provider_app_demo/src/providers/providers.dart';
 import 'package:provider_app_demo/src/widgets/super_floatingaction.dart';
 import 'package:provider_app_demo/src/widgets/super_text.dart';
 
@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
         title: Text(heroesinfo.heroe),
         centerTitle: true,
       ),
-      body: Center(child: SuperText()),
-      floatingActionButton: SuperFloatingAction(),
+      body: const Center(child: SuperText()),
+      floatingActionButton: const SuperFloatingAction(),
     );
   }
 }

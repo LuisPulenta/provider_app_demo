@@ -9,8 +9,8 @@ class HeroesInfo with ChangeNotifier {
   }
 
   set heroe(String nombre) {
-    this._heroe = nombre;
-    this.colorBase = nombre == 'Ironman' ? Colors.red : Colors.blue;
+    _heroe = nombre;
+    colorBase = nombre == 'Ironman' ? Colors.red : Colors.blue;
     notifyListeners();
   }
 }

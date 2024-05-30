@@ -8,7 +8,7 @@ class VillanosInfo with ChangeNotifier {
   }
 
   set villano(String nombre) {
-    this._villano = nombre;
+    _villano = nombre;
     notifyListeners();
   }
 }
